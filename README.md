@@ -53,6 +53,7 @@ docker run -d -p 3000:3000 rize-app
 ## Reflection Question
 **Answer the following question in the space below**: How does containerization with Docker differ from using virtual machines, and why might a development team choose Docker containers over VMs for deploying applications like the one you just containerized?
 
+Virtual machines must run its own full independent guest operating system alongside the application. Subsequently, virtual machines consume gigabytes of storage and much RAM because of the overhead of running a full operating system. Instead, Docker battles this issue by virtualizing the OS layer. They share the host machine's kernel and isolate only the application, its runtime, and its dependencies. Teams will choose Docker over VMS for app deployment because of many reasons: enviromental consistency, portability and scalabality, and resource effeciency. Docker will package the exact Node.js runtime version and dependencies inside the conatiner image, which will ensure that the application runs identically on my local macOS laptop, a partner's machinem and a remote production server. Because containers encapsulate everything needed to run the app, they can easily be moved on a platform or server that supports Docker without worrying about dependencies. Lastly, as I've already highlighted, Docker is much more memory efficient than running VMS.
 
 
 ## Application Requirements for Docker
